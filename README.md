@@ -1,0 +1,2 @@
+q_train_random_multi.py. The main role of this file is to train the Q-learning agent (and optionally a random agent) on the multi‑treasure, multi‑trap gridworld and save the learned Q-table plus reward histories.
+robot_treasure_icons.py .This file’s main role is to load the trained Q-table, run the greedy (or near‑greedy) policy visually with Pygame, and show the robot, treasures, traps, and score on a grid.
