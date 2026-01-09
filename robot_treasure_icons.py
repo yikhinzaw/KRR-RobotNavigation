@@ -173,11 +173,9 @@ def main():
             score -= 1
             steps += 1
             if collected: 
-                print("Trap at finding treasure", state, "Q:", q_table[state_to_idx(state)])
-                score += 10
+                score += 20
             if trap_hit:
-                print("Trap at", state, "Q:", q_table[state_to_idx(state)])
-                score -= 10
+                score -= 20
                 #hit_trap = True
                 #auto_run = False
         if not curr_treasures:
@@ -207,7 +205,7 @@ def main():
         
         # UI
         status = "ALL Treasures FOUND! 🎉" if not curr_treasures else "Searching..."
-        if hit_trap: status = "TRAP! 💥"
+        #if hit_trap: status = "TRAP! 💥"
         lines = [
             f"Score: {score}",
             f"Collected: {len(treasures)-len(curr_treasures)}/{len(treasures)}",
